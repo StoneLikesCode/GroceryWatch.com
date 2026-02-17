@@ -20,5 +20,5 @@ $(document).ready(function(){
     });
 
     // load footer normally
-    $('#footer').load("html/footer.html");
+    $('#footer').load("footer.html");
 });
