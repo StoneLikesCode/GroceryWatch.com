@@ -2,6 +2,9 @@
     /* variable for the green accent color changing this will change the accents of the website */
     --sitegreen: #4ba173;
 }
+body{
+    background-color: #222729;
+}
 .site-header{ 
     background: linear-gradient(135deg, #222729ff, #334155);
     color: #ffffff;
@@ -31,6 +34,12 @@
     margin-top: 0.5rem;
     font-size: 1rem;
     color: var(--sitegreen);
+}
+
+
+p, h1, h2, h3, h4{ 
+    color: #d1c6c6;
+    font-size: 1.3rem;
 }
 
 /* nav bar */
