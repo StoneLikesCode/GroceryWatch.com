@@ -1,54 +1,75 @@
-:root{ 
+:root {
     /* variable for the green accent color changing this will change the accents of the website */
     --sitegreen: #4ba173;
+    --backgroundColor: #222729;
+    --textColor: #ffffff;
 }
-body{
-    background-color: #222729;
+
+body {
+    background-color: var(--backgroundColor);
 }
-.site-header{ 
+
+.site-header {
     background: linear-gradient(135deg, #222729ff, #334155);
     color: #ffffff;
     padding: 2rem 1rem;
     border-bottom: 4px solid var(--sitegreen);
 }
-#header-container{ 
+
+#header-container {
     max-width: 1100px;
     margin: 0 auto;
     text-align: center;
 }
 
-/* lettering */ 
-.site-header h1{ 
-    font-size: 2.5rem; 
+/* lettering */
+.site-header #title {
+    font-size: 2.5rem;
     margin-bottom: 0.3rem;
     letter-spacing: 1px;
 }
 
-.site-header h2{ 
+.site-header a {
+    text-decoration: none;
+}
+
+.site-header a:visited {
+    color: var(--textColor);
+}
+
+.site-header a:hover {
+    color: var(--sitegreen);
+}
+
+.site-header h2 {
     font-size: 1.4rem;
     font-weight: 400;
     opacity: 0.9;
 }
 
-.site-header .tagline { 
+.site-header .tagline {
     margin-top: 0.5rem;
     font-size: 1rem;
     color: var(--sitegreen);
 }
 
 
-p, h1, h2, h3, h4{ 
+p,
+h1,
+h2,
+h3,
+h4 {
     color: #d1c6c6;
     font-size: 1.3rem;
 }
 
 /* nav bar */
-#nav { 
+#nav {
     margin-top: 1.5rem;
 }
 
-#nav ul{ 
-    list-style: none; 
+#nav ul {
+    list-style: none;
     padding: 0;
     margin: 0;
 
@@ -57,21 +78,21 @@ p, h1, h2, h3, h4{
     gap: 1.5rem;
 }
 
-#nav a{ 
+#nav a {
     text-decoration: none;
-    color: #ffffff; 
+    color: var(--textColor);
     font-weight: 500;
     padding: 0.4rem 0.6rem;
     border-radius: 4px;
     transition: background 0.2s ease, color 0.2 ease;
 }
 
-#nav a:hover { 
+#nav a:hover {
     background: var(--sitegreen);
-    color: #ffffff;
+    color: var(--textColor);
 }
 
-/* hamburger menu */ 
+/* hamburger menu */
 .hamburger {
     display: none;
     cursor: pointer;
@@ -88,13 +109,13 @@ p, h1, h2, h3, h4{
     transition: 0.3s;
 }
 
-.hamburger:hover{
-    .bar{
-        background-color: var(--sitegreen);   
+.hamburger:hover {
+    .bar {
+        background-color: var(--sitegreen);
     }
 }
 
-/* hamburger animation */ 
+/* hamburger animation */
 .hamburger.active .bar:nth-child(1) {
     transform: translateY(8px) rotate(45deg);
 }
@@ -109,13 +130,13 @@ p, h1, h2, h3, h4{
 
 
 /* mobile */
-@media (max-width: 768px){ 
-    .site-header h1{
+@media (max-width: 768px) {
+    .site-header h1 {
         font-size: 2rem;
     }
 
     /* hide menu by default */
-    #nav ul { 
+    #nav ul {
         display: none;
         flex-direction: column;
         gap: 1rem;
@@ -133,8 +154,8 @@ p, h1, h2, h3, h4{
         margin: 1rem auto 0 auto;
     }
 
-    /* show hamburger menu */ 
-    .hamburger{ 
+    /* show hamburger menu */
+    .hamburger {
         display: flex;
         margin: 1rem auto 0 auto;
     }
